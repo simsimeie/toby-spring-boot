@@ -21,6 +21,8 @@ public class TobyspringbootApplication {
     public static void main(String[] args){
         GenericApplicationContext applicationContext = new GenericApplicationContext();
         applicationContext.registerBean(HelloController.class);
+        // 인터페이스 타입이 아닌 구체클래스 타입을 명시해야 한다.
+        applicationContext.registerBean(SimpleHelloService.class);
         applicationContext.refresh();
 
         ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
