@@ -3,13 +3,25 @@ package com.example.tobyspringboot;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+@Configuration
 public class TobyspringbootApplication {
+    @Bean
+    public HelloController helloController(HelloService helloService){
+        return new HelloController(helloService);
+    }
+    @Bean
+    public HelloService helloService(){
+        return new SimpleHelloService();
+    }
 
     public static void main(String[] args){
-        GenericWebApplicationContext applicationContext = new GenericWebApplicationContext() {
+        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
             @Override
             protected void onRefresh(){
                 super.onRefresh();
@@ -25,9 +37,7 @@ public class TobyspringbootApplication {
                 webServer.start();
             }
         };
-        applicationContext.registerBean(HelloController.class);
-        // 인터페이스 타입이 아닌 구체클래스 타입을 명시해야 한다.
-        applicationContext.registerBean(SimpleHelloService.class);
+        applicationContext.register(TobyspringbootApplication.class);
         applicationContext.refresh();
     }
 
