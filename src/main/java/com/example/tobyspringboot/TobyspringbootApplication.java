@@ -13,6 +13,14 @@ import org.springframework.web.servlet.DispatcherServlet;
 @Configuration
 @ComponentScan(basePackages = {"com.example.tobyspringboot"})
 public class TobyspringbootApplication {
+    @Bean
+    public ServletWebServerFactory servletWebServerFactory(){
+        return new TomcatServletWebServerFactory();
+    }
+    @Bean
+    public DispatcherServlet dispatcherServlet(){
+        return new DispatcherServlet();
+    }
 
     public static void main(String[] args){
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
@@ -20,12 +28,12 @@ public class TobyspringbootApplication {
             protected void onRefresh(){
                 super.onRefresh();
 
-                ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
+                ServletWebServerFactory serverFactory = this.getBean(ServletWebServerFactory.class);
+                DispatcherServlet dispatcherServlet = this.getBean(DispatcherServlet.class);
+
                 WebServer webServer = serverFactory.getWebServer(servletContext->{
-                    servletContext.addServlet("dispatcherServlet",
-                            // DispatcherServlet에는 Web용 ApplicationContext를 파라미터로 제공해야한다.
-                            new DispatcherServlet(this)
-                    ).addMapping("/*");
+                    servletContext.addServlet("dispatcherServlet",dispatcherServlet)
+                            .addMapping("/*");
 
                 });
                 webServer.start();
