@@ -1,29 +1,16 @@
 package com.example.tobyspringboot;
 
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-public class MySpringBootApplication {
-    public static void run(Class<?> applicationClass, String[] args){
-        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
-            @Override
-            protected void onRefresh(){
-                super.onRefresh();
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-                ServletWebServerFactory serverFactory = this.getBean(ServletWebServerFactory.class);
-                DispatcherServlet dispatcherServlet = this.getBean(DispatcherServlet.class);
-
-                WebServer webServer = serverFactory.getWebServer(servletContext->{
-                    servletContext.addServlet("dispatcherServlet",dispatcherServlet)
-                            .addMapping("/*");
-
-                });
-                webServer.start();
-            }
-        };
-        applicationContext.register(applicationClass);
-        applicationContext.refresh();
-    }
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+@Configuration
+@ComponentScan(basePackages = {"com.example.tobyspringboot"})
+public @interface MySpringBootApplication {
 }
