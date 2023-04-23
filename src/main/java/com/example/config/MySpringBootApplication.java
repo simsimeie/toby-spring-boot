@@ -1,4 +1,4 @@
-package com.example.tobyspringboot;
+package com.example.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,5 +12,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Configuration
 @ComponentScan(basePackages = {"com.example.tobyspringboot"})
+@EnableMyAutoConfiguration
 public @interface MySpringBootApplication {
 }
