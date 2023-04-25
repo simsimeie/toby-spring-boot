@@ -1,6 +1,5 @@
 package com.example.config;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.boot.context.annotation.ImportCandidates;
 import org.springframework.context.annotation.DeferredImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
