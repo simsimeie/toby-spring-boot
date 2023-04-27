@@ -1,0 +1,101 @@
+[33mcommit 38e6cd0d434a9135528e116584c0d07fd52c7425[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: simsimeie <simsim@simsimui-MacBookPro.local>
+Date:   Thu Apr 27 08:50:02 2023 +0900
+
+    AutoConfiguration#7-스프링 자동구성정보를 커스텀 Bean으로 대체 - @ConditionalOnMissingBean
+
+[33mcommit c5ac06d6d5132c737643cacb717fcc47f3893e46[m
+Author: simsimeie <simsim@simsimui-MacBookPro.local>
+Date:   Tue Apr 25 09:52:05 2023 +0900
+
+    AutoConfiguration#6-커스텀 @Conditional
+
+[33mcommit 2524e706727899a6bbc02214eb80142095acdc5e[m
+Author: simsimeie <simsim@simsimui-MacBookPro.local>
+Date:   Tue Apr 25 09:37:16 2023 +0900
+
+    AutoConfiguration#5-@Conditional 학습테스트
+
+[33mcommit 9b4abd7672fd23738cbe1fab434b7048545704ff[m
+Author: simsimeie <simsim@simsimui-MacBookPro.local>
+Date:   Tue Apr 25 09:16:18 2023 +0900
+
+    AutoConfiguration#4-@Conditional 애노테이션을 활용한 선택적 빈등록
+
+[33mcommit f3f30974c00d969a3f3edb1384ed5eb55d32d53f[m
+Author: simsimeie <simsim@simsimui-MacBookPro.local>
+Date:   Mon Apr 24 09:24:35 2023 +0900
+
+    AutoConfiguration#3-ImportCandiates클래스를 활용한 autoconfiguration
+
+[33mcommit 037cd79bcd9ed229b2d0eb61a88d4af2fcf535a2[m
+Author: simsimeie <simsim@simsimui-MacBookPro.local>
+Date:   Mon Apr 24 08:49:39 2023 +0900
+
+    AutoConfiguration#2-@Import 애노테이션을 활용한 autoconfiguration
+
+[33mcommit 37fd1ac6a26c0a894015284f44011b65c834b7cc[m
+Author: simsimeie <simsim@simsimui-MacBookPro.local>
+Date:   Fri Apr 21 09:07:35 2023 +0900
+
+    AutoConfiguration#1-@MySpringBootApplication composed-annotation 적용
+
+[33mcommit cb34fbb2908039976e96492d7fbb0fb7fcbc1f78[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 12:32:40 2023 +0900
+
+    ContainerLess#10-MySpringBootApplication 클래스로 분리하여 사용
+
+[33mcommit ff168184126f023969a99b450fbc59741a99209a[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 12:23:17 2023 +0900
+
+    ContainerLess#9-ServerFactory, DispatchServlet Bean으로 등록 후 사용
+
+[33mcommit 5cd2798cf2256c2f4714e28c6f8d5656cbe02c7b[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 12:14:46 2023 +0900
+
+    ContainerLess#8-Component scan 방식으로 변경
+
+[33mcommit 42a4056bcf1c49584fb9c4edc58ab493056f823a[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 12:09:00 2023 +0900
+
+    ContainerLess#7-JAVA config 형태로 변경
+
+[33mcommit c1ecaf75f26c6afa216d299648efe45ae04853b1[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 11:59:55 2023 +0900
+
+    ContainerLess#6-ApplicationContext refresh시점에 서블릿 컨테이너 기동(내장 톰캣 원리)
+
+[33mcommit f27703226a1859aca401e7033c2d9906e533b2ba[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 11:21:50 2023 +0900
+
+    ContainerLess#5-Dispatcher Servlet 사용
+
+[33mcommit f39b39391cae4f97167817bfe2c098d5b447a4bb[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 08:23:00 2023 +0900
+
+    ContainerLess#4-Dependency Injection 적용
+
+[33mcommit 25df6cec572241f28979839951da088b7c01db94[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 00:12:45 2023 +0900
+
+    ContainerLess#3-Spring Container 적용
+
+[33mcommit cd715ebf4d4be3ecdf92a9bde9d23c41f06869f7[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Fri Mar 31 00:04:09 2023 +0900
+
+    ContainerLess#2-FrontController
+
+[33mcommit 5ce4aefb91c860d6c5bce8d56a26d740b2e657fb[m
+Author: simsimeie <simsimeie@naver.com>
+Date:   Thu Mar 30 23:43:06 2023 +0900
+
+    ContainerLess#1-서블릿 컨테이너 및 서블릿 생성
